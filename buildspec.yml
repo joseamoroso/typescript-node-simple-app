@@ -11,3 +11,8 @@ phases:
   build:
     commands:
       - npm run build
+artifacts:
+  base-directory: dist/my-typescript-app
+  files:
+    - '**/*'
+
