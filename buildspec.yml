@@ -12,7 +12,7 @@ phases:
     commands:
       - npm run build
 artifacts:
-  base-directory: dist/my-typescript-app
+  base-directory: dist/
   files:
     - '**/*'
 
