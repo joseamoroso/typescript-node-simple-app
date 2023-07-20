@@ -13,7 +13,6 @@ phases:
       - npm run build
 artifacts:
   files:
-    - 'dist/**/*'
-    - appspec.yml
-    - 'deploy-script/**/*'
+    - '**/**'
+  exclude-paths: node_modules
 

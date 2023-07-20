@@ -1,0 +1,12 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+  - destination: /home/ubuntu
+hooks:
+  AfterInstall:
+    - location: deploy-script/after-install.sh
+      timeout: 300
+  ApplicationStart:
+    - location: deploy-script/app-start.sh
+      timeout: 100
