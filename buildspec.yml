@@ -12,7 +12,8 @@ phases:
     commands:
       - npm run build
 artifacts:
-  base-directory: dist/
   files:
-    - '**/*'
+    - 'dist/'
+    - appspec.yml
+    - 'deploy-script/**/*'
 
