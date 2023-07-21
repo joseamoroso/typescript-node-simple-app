@@ -12,7 +12,7 @@ phases:
     commands:
       - npm run build
 artifacts:
-  files:
-    - '**/**'
-  exclude-paths: node_modules
+  type: zip
+  paths:
+    - '*'
 
