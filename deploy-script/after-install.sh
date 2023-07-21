@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cd /var/www/my-typescript-app
+cd /home/ubuntu
 npm install
