@@ -5,14 +5,14 @@ files:
     destination: /home/ec2-user/nodejs
 hooks:
   BeforeInstall:
-    - location: scripts/before-install.sh
+    - location: deploy-scripts/before-install.sh
       timeout: 300
       runas: ubuntu
   AfterInstall:
-    - location: scripts/after-install.sh
+    - location: deploy-scripts/after-install.sh
       timeout: 300
       runas: ubuntu
   ApplicationStart:
-    - location: scripts/app-start.sh
+    - location: deploy-scripts/app-start.sh
       timeout: 300
       runas: ubuntu
