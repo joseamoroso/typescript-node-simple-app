@@ -2,11 +2,17 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ec2-user
+    destination: /home/ec2-user/nodejs
 hooks:
-  AfterInstall:
-    - location: deploy-script/after-install.sh
+  BeforeInstall:
+    - location: scripts/before-install.sh
       timeout: 300
+      runas: ubuntu
+  AfterInstall:
+    - location: scripts/after-install.sh
+      timeout: 300
+      runas: ubuntu
   ApplicationStart:
-    - location: deploy-script/app-start.sh
-      timeout: 100
+    - location: scripts/app-start.sh
+      timeout: 300
+      runas: ubuntu

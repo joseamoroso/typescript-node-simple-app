@@ -1,4 +1,5 @@
 #!/bin/bash
 
-cd /home/ec2-user
-npm start
+# Stop all servers and start the server as a daemon
+forever stopall
+forever start /home/ec2-user/nodejs/dist/app.js
